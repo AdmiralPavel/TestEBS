@@ -24,8 +24,8 @@
                 <category android:name="android.intent.category.DEFAULT" />
 
                 <data
-                    android:host="testebs.com"
-                    android:scheme="https" />
+                    android:host="verify.io"
+                    android:scheme="testebs" />
             </intent-filter>
         </activity>
     </application>
