@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
             "- в помещении должно быть светло и тихо;" + "\n" +
             "- если вы регистрировались в очках - наденьте их, если без - снимите.";
 
-    int checkVerified = 0;
+    boolean checkVerified = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +42,7 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
 
         btn.setOnClickListener((v)-> {
             Intent intent = new Intent(this, CameraActivity.class);
+            intent.putExtra("checkVerified", checkVerified);
             startActivity(intent);
             finish();
         });
@@ -50,7 +51,7 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
     @Override
     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
 
-        checkVerified = isChecked ? 1 : 0;
+        checkVerified = isChecked;
         Toast.makeText(this, "Вернет результат: " + (isChecked ? "OK" : "NOT OK"),
                 Toast.LENGTH_SHORT).show();
     }

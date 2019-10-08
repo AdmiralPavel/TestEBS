@@ -18,6 +18,7 @@ public class loadingVideo extends AppCompatActivity {
         setContentView(R.layout.activity_loading_video);
 
         Intent intent = new Intent(this, lastActivity.class);
+        intent.putExtra("checkVerified", (Boolean)getIntent().getExtras().get("checkVerified"));
 
         ProgressBar pg = findViewById(R.id.progressBar);
         pg.setVisibility(View.VISIBLE);

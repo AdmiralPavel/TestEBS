@@ -85,6 +85,7 @@ public class CameraActivity extends AppCompatActivity {
         assert textureView != null;
         textureView.setSurfaceTextureListener(textureListener);
         final Handler handler = new Handler();
+        intent.putExtra("checkVerified", (Boolean)getIntent().getExtras().get("checkVerified"));
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
