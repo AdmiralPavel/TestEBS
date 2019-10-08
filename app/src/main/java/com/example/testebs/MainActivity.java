@@ -5,9 +5,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -28,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         btn.setTextColor(Color.WHITE);
 
         btn.setOnClickListener((v)-> {
-            Intent intent = new Intent(this, loadingVideo.class);
+            Intent intent = new Intent(this, CameraActivity.class);
             startActivity(intent);
         });
     }
