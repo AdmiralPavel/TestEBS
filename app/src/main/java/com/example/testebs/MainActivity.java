@@ -2,6 +2,7 @@ package com.example.testebs;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.os.Bundle;
@@ -25,5 +26,10 @@ public class MainActivity extends AppCompatActivity {
 
         Button btn = findViewById(R.id.buttonStart);
         btn.setTextColor(Color.WHITE);
+
+        btn.setOnClickListener((v)-> {
+            Intent intent = new Intent(this, loadingVideo.class);
+            startActivity(intent);
+        });
     }
 }
