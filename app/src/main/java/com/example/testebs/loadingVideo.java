@@ -27,6 +27,6 @@ public class loadingVideo extends AppCompatActivity {
             public void run() {
                 startActivity(intent);
             }
-        }, 3000);
+        }, 1000);
     }
 }

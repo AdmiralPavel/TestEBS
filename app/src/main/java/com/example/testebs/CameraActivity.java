@@ -78,6 +78,8 @@ public class CameraActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_camera);
 
+        Intent intent = new Intent(this, loadingVideo.class);
+
         textureView = findViewById(R.id.textureView);
         //From Java 1.4 , you can use keyword 'assert' to check expression true or false
         assert textureView != null;
@@ -86,7 +88,7 @@ public class CameraActivity extends AppCompatActivity {
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                finish();
+                startActivity(intent);
             }
         }, 5000);
     }
